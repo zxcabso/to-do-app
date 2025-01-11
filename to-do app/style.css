@@ -1,0 +1,130 @@
+.exo-2-exo {
+  font-family: "Exo 2", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.do-list {
+    transition: all ease-in 5s;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"] {
+    width: calc(100% - 120px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+#addBtn
+{
+    padding: 11px 25px;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    background: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.remove-btn {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #cc0000;
+}
+
+.toast {
+    font-family: exo-2-exo;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 2px 20px;
+    border-radius: 5px;
+    background-color: #ffdddd; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+.error-toast .toast-title {
+    margin-right: 10px;
+    color: #b00020; 
+}
+  
+.toast-message {
+    flex: 1;
+    margin: 0;
+}
+  
+.fade-out {
+    opacity: 0;
+}
+.line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #b00020; /* Dark red line color */
+    transition: width 0.3s ease-in-out;
+}
+  
+.error-toast.fade-out .line {
+    width: 100%; /* Line expands on fade-out */
+}  
+li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
